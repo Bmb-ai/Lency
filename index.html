@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Présentation interactive de la série vidéo Lency Cut." />
+  <title>Lency Cut - Présentation vidéo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="deck" id="deck" aria-live="polite">
+    <header class="topbar" aria-label="Navigation de la présentation">
+      <a class="brand" href="#slide-1" aria-label="Retour au début">
+        <span class="brand-logo-wrap">
+          <img src="assets/logolency.png" alt="Logo Lency" class="brand-logo" onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');" />
+          <span class="brand-fallback is-hidden">Lency</span>
+        </span>
+      </a>
+      <div class="progress" aria-hidden="true">
+        <span class="progress-bar" id="progressBar"></span>
+      </div>
+      <div class="slide-count"><span id="currentSlide">01</span><span>/</span><span id="totalSlides">10</span></div>
+    </header>
+
+    <main class="slides" id="slides">
+      <section class="slide slide-cover is-active" id="slide-1" data-theme="orange">
+        <div class="grain"></div>
+        <div class="shape shape-eye shape-eye-large"></div>
+        <div class="shape shape-loop"></div>
+        <div class="slide-inner cover-grid">
+          <div class="cover-copy reveal">
+            <span class="eyebrow">Présentation de production</span>
+            <h1>Lency Cut</h1>
+            <p class="lead">Une série de 3 Reels pensée pour installer Lency dans l’univers cinéma : culture, recommandations, rythme court et identité visuelle reconnaissable.</p>
+            <div class="cover-tags" aria-label="Mots-clés de la présentation">
+              <span>Brand awareness</span>
+              <span>Culture ciné</span>
+              <span>Format court</span>
+              <span>Production vidéo</span>
+            </div>
+          </div>
+          <div class="cover-card reveal delay-1">
+            <div class="phone-mockup" aria-label="Aperçu mobile stylisé">
+              <div class="phone-top"></div>
+              <div class="phone-screen">
+                <div class="reel-preview one"></div>
+                <div class="reel-preview two"></div>
+                <div class="reel-preview three"></div>
+                <span class="play-dot">play</span>
+              </div>
+            </div>
+            <p class="hint">Utilise les flèches du clavier pour naviguer.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-2" data-theme="light">
+        <div class="slide-inner two-col">
+          <div class="reveal">
+            <span class="section-label">01 / Contexte</span>
+            <h2>Pourquoi une série vidéo ?</h2>
+            <p class="big-text">Lency est une plateforme SaaS dédiée à l’audiovisuel. L’objectif des vidéos n’est pas de vendre directement l’outil, mais de créer un premier lien avec les créateurs, étudiants en cinéma, cinéphiles et passionnés d’image.</p>
+          </div>
+          <div class="stacked-cards reveal delay-1">
+            <article class="mini-card">
+              <span class="mini-number">01</span>
+              <h3>Attirer</h3>
+              <p>Des hooks simples et directs pour capter l’attention dès les premières secondes.</p>
+            </article>
+            <article class="mini-card">
+              <span class="mini-number">02</span>
+              <h3>Fédérer</h3>
+              <p>Des contenus ciné accessibles qui donnent envie de commenter, débattre et suivre la marque.</p>
+            </article>
+            <article class="mini-card">
+              <span class="mini-number">03</span>
+              <h3>Installer</h3>
+              <p>Un territoire de marque autour de la culture audiovisuelle avant la mise en avant produit.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-3" data-theme="dark">
+        <div class="slide-inner editorial-grid">
+          <div class="reveal">
+            <span class="section-label">02 / Ligne éditoriale</span>
+            <h2>Une même logique pour les 3 Reels</h2>
+            <p class="lead muted">Chaque vidéo reprend un format reconnaissable : une promesse claire, une sélection de films, un rythme rapide, puis un appel à l’interaction.</p>
+          </div>
+          <div class="editorial-flow reveal delay-1" aria-label="Structure éditoriale des vidéos">
+            <div class="flow-item"><span>Hook</span><p>Une phrase d’entrée orientée bénéfice : culture ciné, films d’été ou sorties du mois.</p></div>
+            <div class="flow-line"></div>
+            <div class="flow-item"><span>Sélection</span><p>Des films présentés avec un angle simple, visuel et mémorisable.</p></div>
+            <div class="flow-line"></div>
+            <div class="flow-item"><span>Rythme</span><p>Cuts courts, alternance des intervenants et incrustations pour garder l’attention.</p></div>
+            <div class="flow-line"></div>
+            <div class="flow-item"><span>CTA</span><p>Question finale et abonnement pour transformer la vue en engagement.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-4" data-theme="cream">
+        <div class="slide-inner visual-grid">
+          <div class="reveal">
+            <span class="section-label">03 / Direction artistique</span>
+            <h2>Une identité vive, urbaine et très visuelle</h2>
+            <p>La présentation reprend l’univers Lency : orange électrique, neutres minéraux, formes inspirées de l’objectif de caméra, typographie massive pour les titres et lecture plus douce pour les textes.</p>
+          </div>
+          <div class="brand-system reveal delay-1">
+            <div class="palette">
+              <span style="--swatch:#ea3d0e"><b>#EA3D0E</b>Orange électrique</span>
+              <span style="--swatch:#f7f7f2"><b>#F7F7F2</b>Fond clair</span>
+              <span style="--swatch:#e8e8e1"><b>#E8E8E1</b>Neutre</span>
+              <span style="--swatch:#8c8a85"><b>#8C8A85</b>Béton</span>
+              <span style="--swatch:#262522"><b>#262522</b>Noir urbain</span>
+            </div>
+            <div class="identity-card">
+              <div class="identity-eye"></div>
+              <p>Le regard devient le signe central : voir, cadrer, sélectionner, raconter.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-5" data-theme="light">
+        <div class="slide-inner process-layout">
+          <div class="reveal">
+            <span class="section-label">04 / Préproduction</span>
+            <h2>Transformer une idée en format répétable</h2>
+          </div>
+          <div class="process-steps reveal delay-1">
+            <article>
+              <span>Recherche</span>
+              <h3>Choix des thèmes</h3>
+              <p>Des sujets simples à comprendre, capables de toucher une audience large : classiques des années 90, films pour l’été, sorties du mois.</p>
+            </article>
+            <article>
+              <span>Script</span>
+              <h3>Écriture courte</h3>
+              <p>Chaque film est présenté avec une phrase utile, un angle émotionnel ou visuel, puis un bénéfice clair pour le spectateur.</p>
+            </article>
+            <article>
+              <span>Duo</span>
+              <h3>Répartition Lina et Alex</h3>
+              <p>L’alternance entre deux personnes permet de relancer l’attention et de donner un rythme plus naturel à la série.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-6" data-theme="orange">
+        <div class="slide-inner shoot-grid">
+          <div class="reveal">
+            <span class="section-label on-orange">05 / Tournage</span>
+            <h2>Un set-up simple, mais pensé pour le format court</h2>
+            <p class="lead">Le tournage est conçu pour faciliter les incrustations, garder le visage lisible et donner un rendu plus professionnel qu’une simple vidéo face caméra.</p>
+          </div>
+          <div class="spec-board reveal delay-1">
+            <div><span>Lieu</span><strong>École</strong><p>Un cadre accessible, maîtrisable et cohérent avec le projet étudiant.</p></div>
+            <div><span>Cadrage</span><strong>Plan poitrine</strong><p>Le sujet reste centré avec de l’espace pour les affiches et extraits.</p></div>
+            <div><span>Image</span><strong>DJI Osmo Pocket 3</strong><p>Une captation stable, compacte et adaptée aux contenus sociaux.</p></div>
+            <div><span>Son</span><strong>DJI Mic Mini</strong><p>Une voix plus propre, essentielle pour retenir l’attention.</p></div>
+            <div><span>Lumière</span><strong>Softbox</strong><p>Une lumière diffuse pour éviter le rendu plat et ajouter de la profondeur.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-7" data-theme="dark">
+        <div class="slide-inner montage-grid">
+          <div class="reveal">
+            <span class="section-label">06 / Postproduction</span>
+            <h2>Un montage pensé pour éviter le décrochage</h2>
+            <p class="lead muted">Sur CapCut, le montage repose sur une logique très rythmée : aucun blanc inutile, des effets placés au moment exact et des éléments visuels qui apparaissent pour soutenir le discours.</p>
+          </div>
+          <div class="timeline reveal delay-1">
+            <div class="timeline-item"><span>01</span><h3>Vignette</h3><p>Assombrir légèrement les bords pour recentrer le regard.</p></div>
+            <div class="timeline-item"><span>02</span><h3>Cuts chirurgicaux</h3><p>Supprimer blancs, hésitations et respirations inutiles.</p></div>
+            <div class="timeline-item"><span>03</span><h3>Flou et affiches</h3><p>Passer le rush en arrière-plan et faire ressortir le film cité.</p></div>
+            <div class="timeline-item"><span>04</span><h3>SFX</h3><p>Whoosh, pop, ding ou clic pour souligner les transitions.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-8" data-theme="cream">
+        <div class="slide-inner video-slide">
+          <div class="reveal">
+            <span class="section-label">07 / Les 3 Reels</span>
+            <h2>Les vidéos en ligne</h2>
+            <p>Les Reels sont intégrés via Streamable pour garder un dépôt GitHub léger et compatible avec Vercel. Chaque vidéo reste lisible directement dans la slide, avec un lien d’ouverture en grand si besoin.</p>
+          </div>
+          <div class="video-grid reveal delay-1">
+            <article class="video-card">
+              <div class="video-frame video-embed">
+                <iframe src="https://streamable.com/e/v9vnkr" title="REEL 1 - Culture ciné années 90" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a class="external-video" href="https://streamable.com/v9vnkr" target="_blank" rel="noopener">Ouvrir REEL 1</a>
+              <h3>Culture ciné années 90</h3>
+              <p>Un format recommandation basé sur 5 classiques pour améliorer sa culture cinéma.</p>
+            </article>
+            <article class="video-card">
+              <div class="video-frame video-embed">
+                <iframe src="https://streamable.com/e/xjp9ug" title="REEL 2 - Films à voir cet été" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a class="external-video" href="https://streamable.com/xjp9ug" target="_blank" rel="noopener">Ouvrir REEL 2</a>
+              <h3>Films à voir cet été</h3>
+              <p>Un angle saisonnier, plus léger, pensé pour générer commentaires et partages.</p>
+            </article>
+            <article class="video-card">
+              <div class="video-frame video-embed">
+                <iframe src="https://streamable.com/e/u0c4hb" title="REEL 3 - Sorties cinéma de juin" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a class="external-video" href="https://streamable.com/u0c4hb" target="_blank" rel="noopener">Ouvrir REEL 3</a>
+              <h3>Sorties cinéma de juin</h3>
+              <p>Un contenu plus actuel, utile pour positionner Lency comme veille culturelle.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-9" data-theme="light">
+        <div class="slide-inner result-grid">
+          <div class="reveal">
+            <span class="section-label">08 / Cohérence de série</span>
+            <h2>Ce qui rend les 3 vidéos reconnaissables</h2>
+          </div>
+          <div class="result-cards reveal delay-1">
+            <article><span class="badge">Ton</span><p>Accessible, direct, conversationnel, avec une vraie logique de recommandation.</p></article>
+            <article><span class="badge">Visuel</span><p>Orange Lency, typographie impactante, incrustations cinéma et énergie urbaine.</p></article>
+            <article><span class="badge">Rythme</span><p>Alternance face caméra, cuts rapides, effets sonores et affiches qui poppent.</p></article>
+            <article><span class="badge">Objectif</span><p>Développer la notoriété avant de faire entrer progressivement le produit dans l’écosystème de contenu.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-10" data-theme="dark">
+        <div class="slide-inner final-grid">
+          <div class="reveal">
+            <span class="section-label">09 / Conclusion</span>
+            <h2>Une série courte, mais stratégique</h2>
+            <p class="lead muted">Le travail vidéo permet à Lency de parler aux créatifs avant même de parler outil. La série construit un territoire : cinéma, image, culture, recommandation et communauté.</p>
+          </div>
+          <div class="takeaways reveal delay-1">
+            <p><strong>À retenir :</strong> le format court sert ici de porte d’entrée. Il crée de la visibilité, installe la personnalité de marque et prépare le terrain pour des contenus plus orientés plateforme.</p>
+            <div class="next-actions">
+              <span>Prochaines pistes</span>
+              <p>Tester plusieurs hooks, suivre la rétention, comparer les CTA et décliner les meilleurs formats en carrousels ou contenus coulisses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="controls" aria-label="Contrôles de navigation">
+      <button class="nav-btn" id="prevBtn" type="button" aria-label="Slide précédente">←</button>
+      <button class="nav-btn" id="nextBtn" type="button" aria-label="Slide suivante">→</button>
+    </nav>
+
+    <div class="dots" id="dots" aria-label="Accès aux slides"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
