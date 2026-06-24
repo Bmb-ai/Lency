@@ -60,3 +60,7 @@ Méthode simple :
 
 ## Correctif v3
 Les gros titres ont été réduits et sécurisés pour éviter les chevauchements sur les slides longues.
+
+
+## Correctif v4
+La slide des 3 vidéos a été remplacée par une slide sur les hooks/scripts puis une slide dédiée par Reel pour éviter les chevauchements et mieux présenter la stratégie d’écriture.

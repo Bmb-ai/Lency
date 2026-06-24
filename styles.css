@@ -1047,6 +1047,186 @@ code {
   }
 }
 
+
+/* Correctif v4 : une slide par Reel + section hooks/script. */
+.hooks-grid {
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: clamp(28px, 5vh, 56px);
+}
+
+.hook-system {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hook-system article,
+.script-card,
+.script-points article {
+  border: 1px solid rgba(38, 37, 34, 0.12);
+  background: rgba(255, 255, 255, 0.56);
+  border-radius: var(--radius-md);
+  padding: clamp(18px, 2vw, 30px);
+  box-shadow: 0 18px 60px rgba(38, 37, 34, 0.08);
+}
+
+.hook-system span,
+.script-card span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hook-system h3 {
+  margin-bottom: 10px;
+}
+
+.hook-system p,
+.script-card p,
+.script-points p {
+  font-size: clamp(0.92rem, 1vw, 1.06rem);
+  line-height: 1.5;
+}
+
+.reel-detail {
+  grid-template-columns: minmax(0, 0.98fr) minmax(300px, 0.52fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 78px);
+}
+
+.reel-copy {
+  display: grid;
+  gap: clamp(16px, 2.4vh, 24px);
+  min-width: 0;
+}
+
+.reel-copy h2 {
+  font-size: clamp(2rem, 3.25vw, 4.2rem);
+  line-height: 1.03;
+  max-width: 920px;
+}
+
+.script-card {
+  background: rgba(234, 61, 14, 0.08);
+  border-color: rgba(234, 61, 14, 0.22);
+  box-shadow: none;
+}
+
+.script-card p {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.script-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.script-points strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--orange);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.reel-player {
+  justify-self: center;
+  width: min(330px, 31vw);
+  display: grid;
+  gap: 14px;
+}
+
+.reel-player iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 0;
+  border-radius: 30px;
+  display: block;
+  background: var(--dark);
+  box-shadow: 0 28px 80px rgba(38, 37, 34, 0.22);
+  overflow: hidden;
+}
+
+.reel-player a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: rgba(234, 61, 14, 0.1);
+  border: 1px solid rgba(234, 61, 14, 0.22);
+  color: var(--orange);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+/* L’ancienne grille vidéo n’est plus utilisée, mais on la neutralise si elle reste en cache. */
+.video-slide {
+  align-content: center;
+}
+
+@media (max-width: 1320px) {
+  .hook-system,
+  .script-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reel-copy h2 {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+  }
+}
+
+@media (max-height: 830px) and (min-width: 1051px) {
+  .reel-detail {
+    padding-top: 86px;
+    padding-bottom: 46px;
+  }
+
+  .reel-copy {
+    gap: 12px;
+  }
+
+  .reel-copy h2 {
+    font-size: clamp(1.9rem, 2.65vw, 3.2rem);
+  }
+
+  .reel-player {
+    width: min(292px, 28vw);
+  }
+
+  .script-card,
+  .script-points article {
+    padding: 16px;
+  }
+
+  .script-points p,
+  .script-card p {
+    font-size: 0.9rem;
+    line-height: 1.42;
+  }
+}
+
+@media (max-width: 1050px) {
+  .hook-system,
+  .script-points,
+  .reel-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .reel-player {
+    width: min(330px, 88vw);
+  }
+}
+
 @media print {
   html,
   body {
