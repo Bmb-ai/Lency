@@ -119,7 +119,8 @@
               <span style="--swatch:#262522"><b>#262522</b>Noir urbain</span>
             </div>
             <div class="identity-card">
-              <div class="identity-eye"></div>
+              <img src="assets/logolency.png" alt="Logo Lency" class="identity-logo" onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.remove('is-hidden');" />
+              <div class="identity-eye identity-fallback is-hidden"></div>
               <p>Le regard devient le signe central : voir, cadrer, sélectionner, raconter.</p>
             </div>
           </div>
@@ -258,8 +259,6 @@
       <button class="nav-btn" id="prevBtn" type="button" aria-label="Slide précédente">←</button>
       <button class="nav-btn" id="nextBtn" type="button" aria-label="Slide suivante">→</button>
     </nav>
-
-    <div class="dots" id="dots" aria-label="Accès aux slides"></div>
   </div>
 
   <script src="script.js"></script>

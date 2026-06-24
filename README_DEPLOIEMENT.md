@@ -56,3 +56,7 @@ Méthode simple :
 - Flèche gauche : slide précédente
 - Barre espace : slide suivante
 - Touche F : plein écran
+
+
+## Correctif v3
+Les gros titres ont été réduits et sécurisés pour éviter les chevauchements sur les slides longues.

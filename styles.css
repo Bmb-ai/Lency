@@ -62,8 +62,7 @@ video {
 }
 
 .brand,
-.controls,
-.dots {
+.controls {
   pointer-events: auto;
 }
 
@@ -162,7 +161,7 @@ video {
   width: min(1500px, calc(100vw - clamp(34px, 8vw, 140px)));
   height: 100%;
   margin: 0 auto;
-  padding: clamp(95px, 10vh, 130px) 0 clamp(70px, 8vh, 96px);
+  padding: clamp(108px, 12vh, 146px) 0 clamp(70px, 8vh, 96px);
   display: grid;
   align-items: center;
   gap: clamp(32px, 5vw, 82px);
@@ -234,19 +233,21 @@ p {
 h1,
 h2 {
   font-family: var(--display);
-  letter-spacing: -0.05em;
-  line-height: 0.94;
+  letter-spacing: -0.018em;
+  line-height: 0.98;
+  text-wrap: balance;
+  max-width: 100%;
 }
 
 h1 {
-  font-size: clamp(4.4rem, 11vw, 11rem);
-  max-width: 900px;
+  font-size: clamp(3.7rem, 8vw, 7.8rem);
+  max-width: 980px;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: clamp(3rem, 6.8vw, 7.4rem);
-  max-width: 960px;
+  font-size: clamp(2rem, 3.15vw, 3.75rem);
+  max-width: min(1180px, 100%);
   text-transform: uppercase;
 }
 
@@ -576,20 +577,19 @@ p {
 .process-layout,
 .result-grid,
 .video-slide {
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
   align-content: center;
 }
 
 .editorial-flow {
   display: grid;
-  grid-template-columns: 1fr 48px 1fr 48px 1fr 48px 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
   align-items: stretch;
 }
 
 .flow-line {
-  align-self: center;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(247,247,242,0.15), var(--orange), rgba(247,247,242,0.15));
+  display: none;
 }
 
 .visual-grid p,
@@ -641,6 +641,19 @@ p {
   text-align: center;
   background: var(--dark);
   color: var(--cream);
+}
+
+.identity-logo {
+  width: min(220px, 72%);
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 22px 38px rgba(0, 0, 0, 0.22));
+}
+
+.identity-fallback {
+  margin-bottom: 24px;
 }
 
 .identity-eye {
@@ -867,36 +880,12 @@ code {
   transform: none;
 }
 
-.dots {
-  position: fixed;
-  z-index: 60;
-  left: 50%;
-  bottom: clamp(24px, 3.4vw, 46px);
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  padding: 9px 12px;
-  border: 1px solid rgba(140, 138, 133, 0.24);
-  border-radius: 999px;
-  background: rgba(247, 247, 242, 0.12);
-  backdrop-filter: blur(16px);
-}
 
-.dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  background: currentColor;
-  opacity: 0.34;
-  transition: width 220ms ease, opacity 220ms ease;
-}
 
-.dot.is-active {
-  width: 28px;
-  opacity: 1;
+@media (max-width: 1320px) {
+  .editorial-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 1050px) {
@@ -970,13 +959,6 @@ code {
     grid-template-columns: 1fr;
   }
 
-  .flow-line {
-    width: 2px;
-    min-height: 32px;
-    height: 32px;
-    justify-self: center;
-    background: linear-gradient(180deg, rgba(247,247,242,0.15), var(--orange), rgba(247,247,242,0.15));
-  }
 
   .shape-eye-large {
     width: 310px;
@@ -984,9 +966,84 @@ code {
     right: -130px;
   }
 
-  .dots {
-    max-width: calc(100vw - 120px);
-    overflow: auto;
+}
+
+
+/* Correctif v3 : titres longs sécurisés pour éviter les chevauchements sur écran 16/9. */
+.process-layout h2,
+.result-grid h2,
+.visual-grid h2,
+.montage-grid h2,
+.shoot-grid h2,
+.final-grid h2 {
+  font-size: clamp(2rem, 2.85vw, 3.45rem);
+  line-height: 1.03;
+  max-width: 1120px;
+}
+
+.process-layout {
+  gap: clamp(24px, 4vh, 42px);
+}
+
+.process-steps {
+  align-self: start;
+}
+
+.video-slide h2 {
+  font-size: clamp(2.1rem, 3.4vw, 4rem);
+}
+
+.slide-inner > .reveal:first-child {
+  min-width: 0;
+}
+
+@media (max-height: 820px) and (min-width: 1051px) {
+  .slide-inner {
+    padding-top: 92px;
+    padding-bottom: 58px;
+    gap: 24px;
+  }
+
+  h2,
+  .process-layout h2,
+  .result-grid h2,
+  .visual-grid h2,
+  .montage-grid h2,
+  .shoot-grid h2,
+  .final-grid h2 {
+    font-size: clamp(1.85rem, 2.55vw, 3.05rem);
+    line-height: 1.02;
+  }
+
+  .lead,
+  .big-text {
+    font-size: clamp(1.08rem, 1.55vw, 1.65rem);
+  }
+
+  .process-steps article,
+  .result-cards article,
+  .mini-card,
+  .timeline-item,
+  .flow-item,
+  .spec-board div {
+    padding: clamp(16px, 1.6vw, 24px);
+  }
+}
+
+@media (max-width: 1050px) {
+  h1 {
+    font-size: clamp(3rem, 14vw, 5.6rem);
+  }
+
+  h2,
+  .process-layout h2,
+  .result-grid h2,
+  .visual-grid h2,
+  .montage-grid h2,
+  .shoot-grid h2,
+  .final-grid h2 {
+    font-size: clamp(2rem, 9vw, 3.7rem);
+    line-height: 1.03;
   }
 }
 
@@ -998,8 +1055,7 @@ code {
   }
 
   .topbar,
-  .controls,
-  .dots {
+  .controls {
     display: none;
   }
 

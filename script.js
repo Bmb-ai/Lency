@@ -4,23 +4,11 @@ const nextBtn = document.getElementById('nextBtn');
 const currentSlideEl = document.getElementById('currentSlide');
 const totalSlidesEl = document.getElementById('totalSlides');
 const progressBar = document.getElementById('progressBar');
-const dotsWrap = document.getElementById('dots');
 
 let current = 0;
 let touchStartX = null;
 
 totalSlidesEl.textContent = String(slides.length).padStart(2, '0');
-
-slides.forEach((slide, index) => {
-  const dot = document.createElement('button');
-  dot.className = 'dot';
-  dot.type = 'button';
-  dot.setAttribute('aria-label', `Aller à la slide ${index + 1}`);
-  dot.addEventListener('click', () => goTo(index));
-  dotsWrap.appendChild(dot);
-});
-
-const dots = Array.from(document.querySelectorAll('.dot'));
 
 function pauseVideos() {
   document.querySelectorAll('video').forEach((video) => {
@@ -58,9 +46,6 @@ function render() {
     slide.classList.toggle('is-before', index < current);
   });
 
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('is-active', index === current);
-  });
 
   currentSlideEl.textContent = String(current + 1).padStart(2, '0');
   progressBar.style.width = `${((current + 1) / slides.length) * 100}%`;
